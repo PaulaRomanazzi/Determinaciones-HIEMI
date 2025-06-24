@@ -1,0 +1,1588 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title> LABORATORIO HIEMI </title>
+  <style>
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f4f8;
+  padding: 40px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+input {
+  width: calc(100% - 130px);
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: #2196F3;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-left: 5px;
+}
+
+button:hover {
+  background-color: #1976d2;
+}
+
+.item {
+  background: #eaf4ff;
+  padding: 20px;
+  margin-top: 20px;
+  border-left: 6px solid #2196F3;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.item strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+.abc {
+  margin-top: 25px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.abc a {
+  margin: 0 5px;
+  color: #2196F3;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.abc a:hover {
+  color: #0d47a1;
+}
+
+  </style>
+</head>
+<body>
+<div class="container">
+  <h2>🔬 LABORATORIO HIEMI</h2>
+  <input type="text" id="busqueda" list="sugerencias" placeholder="Escribí el nombre de la determinación...">
+  <datalist id="sugerencias">
+    <option value="Abcesos">
+    <option value="Ac Anti Péptido deaminado de Gliadina IgG/IgA (Celiaquía / aDPG)">
+    <option value="Ac Anticardiolipina">
+    <option value="Ac Antiendomisio (Celiaquía)">
+    <option value="Ac Antifosfolípidos">
+    <option value="Ac Antitransglutaminasa IgA (Celiaquía/aTG)">
+    <option value="Ac TG (Anticuerpos Antitiroglobulina)">
+    <option value="Ac TPO (Anticuerpos Antitiroperoxidasa)">
+    <option value="Ácido fólico">
+    <option value="Acido úrico / Uricemia">
+    <option value="Acido úrico en orina (Uricosuria)">
+    <option value="Ácidos biliares">
+    <option value="ACTH">
+    <option value="Adenovirus y Rotavirus">
+    <option value="Adrenalina">
+    <option value="AFP (Alfa Feto Proteína)">
+    <option value="Albúmina">
+    <option value="Aldosterona">
+    <option value="Alfa1-antitripsina">
+    <option value="Amonio">
+    <option value="Androstenediona/ Delta-4-Androstenediona">
+    <option value="Anti-Antígeno de Superficie Hepatitis B (antiHBs)">
+    <option value="Ac anti-DNA">
+    <option value="Anti-Factor X">
+    <option value="Ac Anti Mitocondriales (AMA)">
+    <option value="Ac Anti Músculo Liso (ASMA)">
+    <option value="Ac Anti NúcleoCitoplasmático / FAN">
+    <option value="Ac Anti-B2 glicoproteína">
+    <option value="Ac Anti Citoplasma de neutrófilos ( ANCA / CANCA/ P-ANCA )">
+    <option value="Ac anti ENAS ( Antígenos nucleares extraibles)">
+    <option value="Antígeno de superficie Hepatitis B (HBsAg)">
+    <option value="Antitrombina III">
+    <option value="Aspirado Nasofaríngeo (ANF)">
+    <option value="ASTO/ASLO (Ac Antiestreptolisisna)">
+    <option value="Bartonella henselae IgG / IgM">
+    <option value="Bilirrubina Directa (BD)">
+    <option value="Bilirrubina Indirecta (BI)">
+    <option value="Bilirrubina Total (BT)">
+    <option value="C3 (Complemento)">
+    <option value="Amilasa">
+    <option value="C4 (Complemento)">
+    <option value="Cadena Liviana kappa/ lambda">
+    <option value="Calcio (Ca)/ Calcio total">
+    <option value="Calcio iónico (Ca+2)">
+    <option value="Calciuria/ Calcio en orina ">
+    <option value="Calprotectina">
+    <option value="Carboxihemoglobina (COHb)">
+    <option value="Carga Viral HIV/HCV/HBV/CMV">
+    <option value="CD4+/CD8+ (Control VIH)">
+    <option value="CEA / CA-125 / CA 19-9 / CA 15-3 (Marcadores tumorales)">
+    <option value="Ceruloplasmina">
+    <option value="Chagas Ac">
+    <option value="Chikungunya Virus">
+    <option value="Citomegalovirus (CMV) IgG/IgM ">
+    <option value="Citomegalovirus en orina">
+    <option value="Clearance de Creatinina">
+    <option value="Cofactor de Ristocetina (actividad) ">
+    <option value="Colesterol">
+    <option value="Colinesterasa">
+    <option value="Coprocultivo">
+    <option value="Coproparasitológico seriado">
+    <option value="Cortisol">
+    <option value="Cortisol libre urinario/ CLU">
+    <option value="CPK / CK">
+    <option value="CPK-MB / CK-MB">
+    <option value="Creatinina">
+    <option value="Creatininuria">
+    <option value="Coagulograma">
+    <option value="Dengue IgG/IgM">
+    <option value="DHEA-S (Dehidroepiandrosterona sulfato)">
+    <option value="DHR (Dihidrorodamina)">
+    <option value="Dímero D">
+    <option value="Dopamina">
+    <option value="Drogas de abuso (Anfetaminas, THC,Benzodiazepinas, Cocaína, MDMA, Opioides)">
+    <option value="Drogas terapéuticas en sangre (Metotrexato, Ac Valproico, Vancomicina, Fenobarbital, Carbamazepinas)">
+    <option value="ECA (Enzima convertidora de angiotensina)">
+    <option value="Elastasa">
+    <option value="Electroforesis de Hemoglobina">
+    <option value="Epstein Barr Virus (EBV) Anti-VCA IgG/IgM ">
+    <option value="Eritrosedimentación (ERS/VSG)">
+    <option value="Esputo">
+    <option value="Esteatocrito">
+    <option value="Estradiol/ E2">
+    <option value="Nomograma/ Estado Ácido- Base/ Gases en sangre ">
+    <option value="Factor Reumatoideo (Látex AR)/FR ">
+    <option value="Factor V Leyden">
+    <option value="Factor von Willebrand (FvW)">
+    <option value="Factores de coagulación (II, V, VII, IX, X, XI, XII)">
+    <option value="Ferritina">
+    <option value="Fibrinógeno">
+    <option value="Flujo/Exudado Vaginal">
+    <option value="Fosfatasa Alcalina (FAL)">
+    <option value="Fosfaturia">
+    <option value="Fosforo (P)">
+    <option value="Fructosamina">
+    <option value="FSH">
+    <option value="Cariotipo">
+    <option value="Hisopado Anal Vaginal (HAV) / SBHGB/ EGB">
+    <option value="Ácido homovanílico">
+    <option value="Ácidos nucleicos en saliva">
+    <option value="Acidos nucleicos en saliva">
+    <option value="Acido homovanilico">
+    <option value="Hisopado/exudado de fauces (HF)">
+    <option value="Gamma glutamil transferasa (GGT)">
+    <option value="GH (hormona de crecimiento - somatotropina) basal y Prueba de estímulo Arginina/ Clonidina">
+    <option value="Glucemia/ Glucosa">
+    <option value="Glucosuria">
+    <option value="Graham Test / Test de las gasitas">
+    <option value="17-OH Progesterona">
+    <option value="Haptoglobina">
+    <option value="HDL">
+    <option value="Helicobacter pilory">
+    <option value="Hematocrito">
+    <option value="Hematocrito jeringa">
+    <option value="Hemocultivo x 2">
+    <option value="Hemoglobina glicosilada (HbA1c)">
+    <option value="Hemograma Completo">
+    <option value="Hepatitis A IgM/total">
+    <option value="Hepatitis B anti-core (antiHBc) IgG/IgM">
+    <option value="Hepatitis C (HCV)">
+    <option value="Hepatograma (GOT, GPT, FAL, BiliT/D/I)">
+    <option value="Herpes Simple Virus I y II (HSV) IgG/IgM">
+    <option value="Hidatidosis/Arco 5">
+    <option value="Hisopado/Exudado Ocular">
+    <option value="HIV">
+    <option value="HIV Test rápido">
+    <option value="Hormona anti-Mulleriana (AMH)">
+    <option value="IgA Total">
+    <option value="IgE Total">
+    <option value="IGF-1 (Somatomedina)">
+    <option value="IGF-1BP3">
+    <option value="IgG Total">
+    <option value="IgM Total">
+    <option value="Inhibidor Lúpico (IL)">
+    <option value="Inmunofenotipo">
+    <option value="Insulina">
+    <option value="Ionograma en sangre (Na+, Cl-, K+)">
+    <option value="Ionograma Urinario (Na+, Cl-, K+)">
+    <option value="Magnesiuria/ Mg en orina/ Magnesio en orina">
+    <option value="LCR Citoquímico">
+    <option value="LCR Cultivo">
+    <option value="LCR Virológico (HSV I/HSV II/Enterovirus)">
+    <option value="LDH">
+    <option value="LDL">
+    <option value="Leptospirosis">
+    <option value="LH">
+    <option value="Líquidos de punción (otros)">
+    <option value="Magnesio (Mg)">
+    <option value="Micológico">
+    <option value="Microalbúminuria">
+    <option value="Microhematocrito CHAGAS">
+    <option value="Prolactina/ PRL">
+    <option value="Proteína C">
+    <option value="Tiempo de tromboplastina (KPTT/APTT)">
+    <option value="Toxocara canii IgG/IgM">
+    <option value="Toxoplasmosis IgG/IgM">
+    <option value="TRAb (Anticuerpos anti TSHR)">
+    <option value="Transferrina">
+    <option value="Triglicéridos / TG / TGL">
+    <option value="Trombina">
+    <option value="Troponina">
+    <option value="TSH (hormona tiroestimulante)">
+    <option value="Uremia">
+    <option value="Urocultivo">
+    <option value="Uroproteinograma">
+    <option value="Varicela IgG/IgM">
+    <option value="VDRL">
+    <option value="Vitamina B12">
+    <option value="Vitamina D">
+    <option value="Zyka Virus">
+    <option value="Mycoplasma pneumoniae IgG/IgM">
+    <option value="Noradrenalina">
+    <option value="Orina Completa">
+    <option value="Partes blandas">
+    <option value="Partes óseas / hueso">
+    <option value="Parvovirus B19 IgG/IgM">
+    <option value="PCR (Proteína C Reactiva)">
+    <option value="Perfil Lipídico">
+    <option value="Poblaciones doble negativas">
+    <option value="Poblaciones linfocitarias (CD3/CD4/CD8/CD19/CD56)">
+    <option value="Pro-BNP">
+    <option value="Progesterona">
+    <option value="Proteína S">
+    <option value="Proteinas Totales">
+    <option value="Proteinograma electroforético">
+    <option value="Prueba de tolerancia oral a la glucosa (PTOG)">
+    <option value="Prueba treponémica">
+    <option value="PTH (Paratohormona)">
+    <option value="Punta de catéter">
+    <option value="Renina">
+    <option value="Reticulocitos">
+    <option value="Retrocultivo">
+    <option value="RIN">
+    <option value="Rubeola IgG/IgM">
+    <option value="Sedimento de Orina">
+    <option value="Subunidad Beta HCG">
+    <option value="T3 (triyodotironina)">
+    <option value="T4 Libre (tiroxina)/T4L">
+    <option value="T4 Total/T4/T4T">
+    <option value="Test de hipersensibilidad al abacavir">
+    <option value="Testosterona">
+    <option value="Testosterona libre">
+    <option value="TGO / GOT / AST">
+    <option value="TGP / GPT /ALT">
+    <option value="Tiempo de Protrombina (TP)">
+
+
+  </datalist>
+  <button onclick="buscar()">Buscar</button>
+  <button onclick="limpiar()">Borrar</button>
+ 
+  <div class="resultado" id="resultado"></div>
+</div>
+
+<script>
+const datos = {
+  "Abcesos": {
+    "muestra": "Frasco estéril o jeringa",
+    "condiciones": "",
+    "sector": "Bacteriología",
+    "observacion": ""
+  },
+  "Ac Anti Péptido deaminado de Gliadina IgG/IgA (Celiaquía / aDPG)": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8 hs.",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "Ac Anticardiolipina": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8 hs.",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "Ac Antiendomisio (Celiaquía)": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8 hs.",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "Ac Antifosfolípidos": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8 hs.",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "Ac Antitransglutaminasa IgA (Celiaquía/aTG)": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8 hs.",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "Ac TG (Anticuerpos Antitiroglobulina)": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8 hs. El día de la extracción no debe tomar la medicación previo a la misma.",
+    "sector": "Endocrinología (241)",
+    "observacion": ""
+  },
+  "Ac TPO (Anticuerpos Antitiroperoxidasa)": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8 hs. El día de la extracción no debe tomar la medicación previo a la misma.",
+    "sector": "Endocrinología (241)",
+    "observacion": ""
+  },
+  "Ácido fólico": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8 hs.",
+    "sector": "Endocrinología (241)",
+    "observacion": ""
+  },
+  "Acido úrico / Uricemia": {
+    "muestra": "Acido úrico / Uricemia",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Química clínica",
+    "observacion": ""
+  },
+  "Acido úrico en orina (Uricosuria)": {
+    "muestra": "Orina de 24hs u orina al azar",
+    "condiciones": "Orina de 24 hs: Desechar la primera orina de la mañana. Anotar la hora de descarte para tomarla como hora de inicio. Recolectar TODO el volumen de todas las micciones hasta la primera del día siguiente inclusive (Esta debe coincidir con el horario de descarte de la mañana anterior) Orina al azar : chorro medio 10 ml . Recipiente limpio y seco.",
+    "sector": "Química clínica",
+    "observacion": ""
+  },
+  "Ácidos biliares": {
+    "muestra": "Sangre con Heparina (tapa verde). Suero",
+    "condiciones": "Ayuno de 8 hs.",
+    "sector": "Química clínica",
+    "observacion": ""
+  },
+  "ACTH": {
+    "muestra": "Sangre en tubo con EDTA (remitir inmediatamente al laboratorio ya que debe ser refrigerado)",
+    "condiciones": "Antes de las 9 de la mañana, con ayuno de 8-10 horas.",
+    "sector": "Endocrinología (241)",
+    "observacion": ""
+  },
+  "Adenovirus y Rotavirus": {
+    "muestra": "Materia Fecal fresca (pequeña porción) en frasco de boca ancha, seco, sin restos de detergentes, medios de transporte o conservantes.",
+    "condiciones": "Mantener refrigerado hasta remitir al laboratorio. Sólo se procesan heces diarreicas, heces formes no son aptas para su procesamiento. ",
+    "sector": "Hepatología (245)",
+    "observacion": ""
+  },
+  "Adrenalina": {
+    "muestra": "Sangre entera con heparina en jeringa de 10 ml completa (remitir inmediatamente al laboratorio ya que debe ser refrigerado). Orina de 24 horas ",
+    "condiciones": "Ayuno de 8-10 horas, realizar la extracción luego de haber permanecido acostado durante 30 minutos Durante dos días el paciente deberá comer habitualmente suprimiendo: banana, tomate, palta, berenjena, frutas cítricas, cremas, tortas, chocolates, cacao, helados, maníes, nueces, y todo alimento que contenga vainilla (dulces, golosinas). No tomar chocolate, café, té, mate o jugo. BEBER SOLO AGUA Previa consulta médica no ingerir en los 10 días previos:  • Aspirinas; ni medicamentos que contengan : sulfas , espironolactona, morfina, clorpromazina,diuréticos, gotas nasales, antihistamínicos, broncodilatadores, supresores del apetito, nitroglicerina, nitroprusiato de sodio, tiofilina, alfa2 simpaticomimeticos, antagonistas del Ca, inhibidores de ECA, alfa metil dopa, inhibidores de la MAO, fenotiacinas, antidepresivos tricíclicos, L-dopa, bloqueantes adrenérgicos alfa y beta, hipertensivos (Por indicación médica) • Evitar el estrés, ejercicio físico y dolor. No fumar ",
+    "sector": "Endocrinología (241)",
+    "observacion": "⚠️ Requiere orden de compra."
+  },
+  "AFP (Alfa Feto Proteína)": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Endocrinología (241)",
+    "observacion": ""
+  },
+  "Albúmina": {
+    "muestra": "Sangre con heparina (Tapa verde)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Química clínica",
+    "observacion": ""
+  },
+  "Aldosterona": {
+    "muestra": "Suero (remitir inmediatamente al laboratorio ya que debe ser refrigerado)",
+    "condiciones": "Antes de las 10 de la mañana, con ayuno de 8-10 hs Si la orden indica: REPOSO: permanecerá de 1 ½ hora a 2 horas acostado DE PIE o ACOSTADO: se respetará la orden medica de 1 ½ hora a 2 horas NO INDICA REPOSO: el paciente deberá permanecer de pie o deambular de 1 ½ hora a 2 horas Previa consulta médica si las condiciones clínicas lo permiten: • El paciente deberá mantener una dieta previa normosódica por lo menos 2 semanas antes de la toma de muestra. • Deberá evitar 2-4 semanas previas a la extracción de sangre: diuréticos, antihipertensivos, esteroides, anticonceptivos orales, propanolol, progesterona, estrógenos, corticoides, opiáceos, heparina, espironolactona, litio, bloqueantes de canales de Ca, inhibidores de la ECA.  • Suspender por lo menos 2 semanas antes de la toma de muestra la ingesta de café y alcohol. • Suspender actividad física.",
+    "sector": "Endocrinoligía (241)",
+    "observacion": ""
+  },
+  "Alfa1-antitripsina": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "Amonio": {
+    "muestra": "Sangre con EDTA (Extracción sin lazo, llenar el tubo lleno hasta la tapa, en frío).Previo a la extracción avisar al sector.",
+    "condiciones": "Remitir dentro de los 15 minutos en hielo o con refrigerante ",
+    "sector": "Química Clínica",
+    "observacion": "⚠️ Avisar al laboratorio antes de remitir la muestra."
+  },
+  "Androstenediona/ Delta-4-Androstenediona": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8-10 horas, se debe realizar la extracción antes de las 9 am. En pacientes de sexo femenino salvo indicación médica diferente, es aconsejable realizar la extracción entre los días 3 y 5 del ciclo menstrual (día 1: primer día de la menstruación).  Si está tomando alguna medicación para la función hormonal, tómela después de haber realizado el estudio. El día anterior a la toma de la muestra no mantener relaciones sexuales y evitar situaciones de estrés. ",
+    "sector": "Endocrinología (241))",
+    "observacion": ""
+  },
+  "Anti-Antígeno de Superficie Hepatitis B (antiHBs)": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Serología (232)",
+    "observacion": ""
+  },
+  "Ac anti-DNA": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8 hs.",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "Anti-Factor X": {
+    "muestra": "Sangre con citrato (Tubo tapa celeste) . Al menos 2 tubos",
+    "condiciones": "Pediátricos: menores de 6 meses ayuno mínimo de 2 hs, entre 6 meses y 2 años ayuno mínimo de 3 hs, mayores a 2 años ayuno mínimo de 4 hs. Adultos: Ayuno de 8 hs, la extracción se realiza dentro de las 4 hs (entre 4 a 6) post administración de enoxaparina. ",
+    "sector": "Hemostasia",
+    "observacion": ""
+  },
+  "Ac Anti Músculo Liso (ASMA)": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "Ac Anti Mitocondriales (AMA)": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "Ac Anti NúcleoCitoplasmático / FAN": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "Ac Anti-B2 glicoproteína": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "Ac Anti Citoplasma de neutrófilos ( ANCA / CANCA/ P-ANCA )": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "Ac anti ENAS ( Antígenos nucleares extraibles)": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "Antígeno de superficie Hepatitis B (HBsAg)": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Serología (232)",
+    "observacion": ""
+  },
+  "Antitrombina III": {
+    "muestra": "Sangre con citrato (Tubo tapa celeste). Al menos 2 tubos. Ideal 2-3 tubos.",
+    "condiciones": "Pediátricos: menores de 6 meses ayuno mínimo de 2 hs, entre 6 meses y 2 años ayuno mínimo de 3 hs, mayores a 2 años ayuno mínimo de 4 hs. Adultos: Ayuno de 8 hs.",
+    "sector": "Hemostasia",
+    "observacion": ""
+  },
+  "Aspirado Nasofaríngeo (ANF)": {
+    "muestra": "ANF en tubo estéril",
+    "condiciones": "Procesamiento inmediato o almacenamiento a 4ºC ",
+    "sector": "Serología (232)",
+    "observacion": ""
+  },
+  "ASTO/ASLO (Ac Antiestreptolisisna)": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "Bartonella henselae IgG / IgM": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Serología (232)",
+    "observacion": ""
+  },
+  "Bilirrubina Directa (BD)": {
+    "muestra": "Sangre con heparina (Tapa verde)",
+    "condiciones": "Recién nacidos y lactantes no requiere ayuno. Pediátricos y adultos : Ayuno de 8hs",
+    "sector": "Quimica clinica",
+    "observacion": ""
+  },
+  "Bilirrubina Indirecta (BI)": {
+    "muestra": "Sangre con heparina (Tapa verde)",
+    "condiciones": "Recién nacidos y lactantes no requiere ayuno. Pediátricos y adultos : Ayuno de 8hs",
+    "sector": "Quimica clinica",
+    "observacion": ""
+  },
+  "Bilirrubina Total (BT)": {
+    "muestra": "Sangre con heparina (Tapa verde)",
+    "condiciones": "Recién nacidos y lactantes no requiere ayuno. Pediátricos y adultos : Ayuno de 8hs",
+    "sector": "Quimica clinica",
+    "observacion": ""
+  },
+  "C3 (Complemento)": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "Amilasa": {
+    "muestra": "Sangre con heparina (Tapa verde)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Química clínica",
+    "observacion": ""
+  },
+  "C4 (Complemento)": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "Calcio (Ca)/ Calcio total": {
+    "muestra": "Sangre con heparina (Tapa verde)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Quimica clínica",
+    "observacion": ""
+  },
+  "Cadena Liviana kappa/ lambda": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "Calcio iónico (Ca+2)": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "Calciuria/ Calcio en orina ": {
+    "muestra": "Orina de 24hs u orina al azar ",
+    "condiciones": "Orina de 24 hs: Desechar la primera orina de la mañana. Anotar la hora de descarte para tomarla como hora de inicio. Recolectar TODO el volumen de todas las micciones hasta la primera del día siguiente inclusive (Esta debe coincidir con el horario de descarte de la mañana anterior) Orina al azar : chorro medio 10 ml . Recipiente limpio y seco ",
+    "sector": "Química clínica",
+    "observacion": ""
+  },
+  "Coagulograma": {
+    "muestra": "Sangre con citrato (Tubo tapa celeste)",
+    "condiciones": "Pediátricos: menores de 6 meses ayuno mínimo de 2 hs, entre 6 meses y 2 años ayuno mínimo de 3 hs, mayores a 2 años ayuno mínimo de 4 hs. Adultos: Ayuno de 8 hs. ",
+    "sector": "Hemostasia",
+    "observacion": ""
+  },
+  "Calprotectina ": {
+    "muestra": "Calprotectina",
+    "condiciones": "Sólo si está solicitado por servicio de gastroenterología. Frasco limpio boca ancha. Conservar en heladera ",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "Carboxihemoglobina (COHb) ": {
+    "muestra": "Jeringa heparinizada c/tapa",
+    "condiciones": "Ausencia de aire. Remitir inmediatamente.",
+    "sector": "Medio Interno (242)",
+    "observacion": ""
+  },
+  "Carga Viral HIV/HCV/HBV/CMV": {
+    "muestra": "Sangre con EDTA (Tubo tapa violeta ESTÉRIL)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Serología (232)",
+    "observacion": ""
+  },
+  "CD4+/CD8+ (Control VIH)": {
+    "muestra": "Sangre con EDTA (Tubo tapa violeta).Conservar a temperatura ambiente ",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "CEA / CA-125 / CA 19-9 / CA 15-3 (Marcadores tumorales)": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Endocrinología (241)",
+    "observacion": ""
+  },
+  "Ceruloplasmina ": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "Chikungunya Virus": {
+    "muestra": "Ayuno 8 hs + Planilla Epidemiológica",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Serología (232)",
+    "observacion": ""
+  },
+  "Chagas Ac ": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Serología (232)",
+    "observacion": ""
+  },
+  "Citomegalovirus (CMV) IgG/IgM ": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Serología (232)",
+    "observacion": ""
+  },
+  "Citomegalovirus en orina ": {
+    "muestra": "Orina (3-5ml) en jeringa o recipiente estéril ",
+    "condiciones": "Técnica estéril",
+    "sector": "Serología (232)",
+    "observacion": ""
+  },
+  "Clearance de Creatinina ": {
+    "muestra": "Clearance de Creatinina ",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Quimica clínica",
+    "observacion": ""
+  },
+  "Cofactor de Ristocetina (actividad)": {
+    "muestra": "3 tubos con citrato (Tapa celeste)  ",
+    "condiciones": "Reposo 30 minutos previo a la extracción",
+    "sector": "Hemostasia",
+    "observacion": ""
+   },
+  "Colesterol ": {
+    "muestra": "Sangre con heparina (Tapa verde) ",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Quimica clínica",
+    "observacion": ""
+  },
+  "Colinesterasa ": {
+    "muestra": "Sangre con heparina (Tapa verde) ",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Quimica clínica",
+    "observacion": ""
+  },
+  "Coprocultivo": {
+    "muestra": "Hisopo en medio estéril (Cary Blair o Stuart) ",
+    "condiciones": "Tomar con el hisopo porciones mucosas y/o sanguinolentas de materia fecal recolectada en un recipiente limpio y seco (no del inodoro). Bebes que usen pañal: colocar el pañal al revés, con la parte absorbente hacia afuera y proceder de la misma forma.",
+    "sector": "Bacteriología",
+    "observacion": ""
+  },
+  "Coproparasitológico seriado": {
+    "muestra": "Materia Fecal",
+    "condiciones": "Tomar muestras de materia fecal recíen emitida (1 cucharadita) durante 7 días seguidos desde un material descartable, nunca del inodoro y evitando contaminación con orina. Respetar un mínimo total de 7 muestras de una deposición por día, en el caso que el paciente no defeque un día debe extenderse los días de recolección (máximo 14 días) ",
+    "sector": "Parasitología",
+    "observacion": ""
+   },
+  "Cortisol": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno 8 hs. Realizar la extracción antes de las 9 AM, con 30 minutos de reposo.",
+    "sector": "Endocrinología (241)",
+    "observacion": ""
+  },
+  "Cortisol libre urinario/ CLU": {
+    "muestra": "Orina de 24 horas",
+    "condiciones": "Orina de 24 hs: Desechar la primera orina de la mañana. Anotar la hora de descarte para tomarla como hora de inicio. Recolectar TODO el volumen de todas las micciones hasta la primera del día siguiente inclusive (Esta debe coincidir con el horario de descarte de la mañana anterior) Orina al azar : chorro medio 10 ml . Recipiente limpio y seco ",
+    "sector": "Endocrinología (241)",
+    "observacion": ""
+  },
+  "CPK / CK": {
+    "muestra": "Sangre con heparina (Tapa verde)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Química Clínica",
+    "observacion": ""
+  },
+  "CPK-MB / CK-MB": {
+    "muestra": "Sangre con heparina (Tapa verde)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Química Clínica",
+    "observacion": ""
+   },
+  "Creatinina": {
+    "muestra": "Sangre con heparina (Tapa verde)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Química Clínica",
+    "observacion": ""
+  },
+  "Creatininuria": {
+    "muestra": "Orina de 24hs u orina al azar",
+    "condiciones": "Orina de 24 hs: Desechar la primera orina de la mañana. Anotar la hora de descarte para tomarla como hora de inicio. Recolectar TODO el volumen de todas las micciones hasta la primera del día siguiente inclusive (Esta debe coincidir con el horario de descarte de la mañana anterior) Orina al azar : chorro medio 10 ml . Recipiente limpio y seco ",
+    "sector": "Quimica Clínica",
+    "observacion": ""
+  },
+  "Dengue IgG/IgM": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Serología (232)",
+    "observacion": "Requiere planilla epidemiológica"
+  },
+  "DHEA-S (Dehidroepiandrosterona sulfato)": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Endocrinología (241)",
+    "observacion": ""
+  },
+  "DHR (Dihidrorodamina)": {
+    "muestra": "Sangre con EDTA (Tubo tapa violeta) EXCLUSIVO para DHR. Se procesa los días miércoles",
+    "condiciones": "Ayuno de 8 hs, consultar al sector previa extracción.",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "Dímero D": {
+    "muestra": "Sangre con citrato (Tubo tapa celeste). Al menos 2 tubos",
+    "condiciones": "Pediátricos: Menores a 6 meses de ayuno mínimo de 2 hs, entre 6 meses y 2 años ayuno mínimo de 3 hs, mayores a 2 años ayuno mínimo de 4 hs. Adultos ayuno de 8 hs",
+    "sector": "Hemostasia",
+    "observacion": ""
+  },
+  "Dopamina": {
+    "muestra": "Sangre entera con heparina en jeringa de 10 ml completa (remitir inmediatamente al laboratorio ya que debe ser refrigerado). Orina de 24 horas ",
+    "condiciones": "Ayuno de 8-10 horas, realizar la extracción luego de haber permanecido acostado durante 30 minutos Durante dos días el paciente deberá comer habitualmente suprimiendo: banana, tomate, palta, berenjena, frutas cítricas, cremas, tortas, chocolates, cacao, helados, maníes, nueces, y todo alimento que contenga vainilla (dulces, golosinas). No tomar chocolate, café, té, mate o jugo. BEBER SOLO AGUA Previa consulta médica no ingerir en los 10 días previos:  • Aspirinas; ni medicamentos que contengan : sulfas , espironolactona, morfina, clorpromazina,diuréticos, gotas nasales, antihistamínicos, broncodilatadores, supresores del apetito, nitroglicerina, nitroprusiato de sodio, tiofilina, alfa2 simpaticomimeticos, antagonistas del Ca, inhibidores de ECA, alfa metil dopa, inhibidores de la MAO, fenotiacinas, antidepresivos tricíclicos, L-dopa, bloqueantes adrenérgicos alfa y beta, hipertensivos (Por indicación médica) • Evitar el estrés, ejercicio físico y dolor. No fumar ",
+    "sector": "Endocrinología (241)",
+    "observacion": "⚠️ Requiere orden de compra."
+  },
+  "Drogas de abuso (Anfetaminas, THC, Benzodiazepinas, Cocaína, MDMA, Opioides)": {
+    "muestra": "Orina al azar",
+    "condiciones": "Remitir inmediatamente o conservar en heladera al resguardo de la luz. Volumen mínimo de 10 ml (frasco limpio boca ancha) Planilla de consentimiento ",
+    "sector": "Serología (232)",
+    "observacion": ""
+  },
+  "Drogas terapéuticas en sangre (Metotrexato, Ac Valproico, Vancomicina, Fenobarbital, Carbamazepinas) ": {
+    "muestra": "Suero (tapa roja): Ac Valproico, Vancomicina, Fenobarbiral, Carbamasepinas, Metotrexato (Metotrex. conservar la muestra al abrigo de la luz) Ciclosporina, tacrolimus y sirolimus tubo con EDTA (tapa violeta) ",
+    "condiciones": "Planilla de consentimiento",
+    "sector": "Serología (232)",
+    "observacion": ""
+  },
+  "ECA (Enzima convertidora de angiotensina)": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Antes de las 9 de la mañana, con ayuno de 8hs.",
+    "sector": "Endocrinología (241) ",
+    "observacion": ""
+  },
+  "Elastasa": {
+    "muestra": "Materia fecal fresca",
+    "condiciones": "Sólo si está solicitado por servicio de gastroenterología. Frasco limpio boca ancha. Conservar en heladera",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "Electroforesis de Hemoglobina ": {
+    "muestra": "Sangre con EDTA (Tubo tapa violeta)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Hemogramas",
+    "observacion": ""
+  },
+  "Epstein Barr Virus (EBV) Anti-VCA IgG/IgM": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Serología (232)",
+    "observacion": ""
+  },
+  "Eritrosedimentación (ERS/VSG)": {
+    "muestra": "Sangre con EDTA (Tubo tapa violeta) o sangre con Citrato (tapa negra)",
+    "condiciones": "Ayuno 8 hs. En el caso de remitir tubo con EDTA y que además se solicite la determinación de hemograma remitir 2 tubos ",
+    "sector": "Hemogramas",
+    "observacion": ""
+  },
+  "Esputo": {
+    "muestra": "Frasco estéril",
+    "condiciones": "Conservación en heladera.",
+    "sector": "Bacteriología",
+    "observacion": ""
+  },
+  "Esteatocrito": {
+    "muestra": "Muestra de materia fecal en frasco de boca ancha, lavado con agua y detergente y enjuagado con agua destilada ",
+    "condiciones": "Niños hasta 2 años: el niño debe comer durante un día, un total de 2 gr de manteca o 2 cucharadas de aceite de maíz por Kg de peso del niño (por ejemplo si pesa 10 kg deberá comer 20 gr de manteca o 20 cucharadas de aceite distribuídas en el día). Niños de 2 hasta 15 años: el niño debe comer durante un día, un total de 30-50 gr de manteca, distribuidos durante las comidas. Al día siguiente de iniciada la dieta recolectar una muestra de materia fecal y remitir al laboratorio. No ingerir: lechuga, acelga o espinaca. (Si el paciente es celíaco o tiene fibrosis quística no debe realizar la dieta)",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "Estradiol/ E2": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8hs. Pacientes que ya menstrúan: Se debe realizar entre los días 3 y 5 del ciclo menstrual (día 1: primer día de la menstruación). Si está tomando alguna medicación para la función hormonal, tomarla después de haber realizado el estudio. Suspender anticonceptivos orales al menos durante 1 mes (previa consulta con el médico).",
+    "sector": "Endocrinología (241)",
+    "observacion": ""
+  },
+  "Nomograma/ Estado Ácido- Base/ Gases en sangre": {
+    "muestra": "Jeringa heparinizada",
+    "condiciones": "Ausencia de aire. Remitir inmediatamente",
+    "sector": "Medio Interno (242)",
+    "observacion": ""
+  },
+  "Cariotipo": {
+    "muestra": "Jeringa heparinizada",
+    "condiciones": "",
+    "sector": "Genética",
+    "observacion": ""
+  },
+  "Factor Reumatoideo (Látex AR)/ FR ": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "Factor V Leyden": {
+    "muestra": "Tubo con EDTA estéril. Mínimo 2 tubos",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Hemostasia",
+    "observacion": ""
+  },
+  "Factor von Willebrand (FvW) ": {
+    "muestra": "Sangre con citrato (Tubo tapa celeste). Al menos 2 tubos (ideal 3), previo aviso al sector ",
+    "condiciones": "Reposo de 30 minutos previo a la extracción. Pediátricos: menores de 6 meses ayuno mínimo de 2 hs, entre 6 meses y 2 años ayuno mínimo de 3 hs, mayores a 2 años ayuno mínimo de 4 hs. Adultos: Ayuno de 8 hs",
+    "sector": "Hemostasia",
+    "observacion": ""
+  },
+  "Factores de coagulación (II, V, VII, IX, X, XI, XII)": {
+    "muestra": "Sangre con citrato (Tubo tapa celeste). Al menos 2 tubos . Requieren orden completa con diagnóstico. Si el paciente es hemofílico aclarar droga empleada, dosis y día de infusión.",
+    "condiciones": "Pediátricos: menores de 6 meses ayuno mínimo de 2 hs, entre 6 meses y 2 años ayuno mínimo de 3 hs, mayores a 2 años ayuno mínimo de 4 hs. Adultos: Ayuno de 8 hs",
+    "sector": "Hemostasia",
+    "observacion": ""
+  },
+  "Ferritina": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Endocrinología (241)",
+    "observacion": ""
+  },
+  "Fibrinógeno": {
+    "muestra": "Sangre con citrato (Tubo tapa celeste). Al menos 2 tubos",
+    "condiciones": "Pediátricos: menores de 6 meses ayuno mínimo de 2 hs, entre 6 meses y 2 años ayuno mínimo de 3 hs, mayores a 2 años ayuno mínimo de 4 hs. Adultos: Ayuno de 8 hs. ",
+    "sector": "Hemostasia",
+    "observacion": ""
+  },
+  "Flujo/Exudado Vaginal": {
+    "muestra": "1 Hisopo de endocervix (+ hisopo en tubo seco para Ureaplasmas y Mycoplasma) y 1 hisopado de flujo vaginal (por separado), cada uno con medio de transporte ",
+    "condiciones": "Abstinencia sexual por 48 hs, no utilizar óvulos, toallitas ni tampón, no realizar ducha vaginal, toma de muestra alejada del período menstrual.",
+    "sector": "Bacteriología",
+    "observacion": ""
+  },
+  "Fosfatasa Alcalina (FAL)": {
+    "muestra": "Sangre con heparina (Tapa verde)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Química Clínica",
+    "observacion": ""
+  },
+  "Fosfaturia": {
+    "muestra": "Orina de 24hs u orina al azar",
+    "condiciones": " Orina de 24hs: Desechar la primera orina de la mañana. Anotar la hora de descarte para tomarla como hora de inicio. Recolectar TODO el volumen de todas las micciones hasta la primera del día siguiente inclusive (Esta debe coincidir con el horario de descarte de la mañana anterior) Orina al azar : chorro medio 10 ml . Recipiente limpio y seco ",
+    "sector": "Química Clínica",
+    "observacion": ""
+  },
+  "Fosforo (P)": {
+    "muestra": "Sangre con heparina (Tapa verde)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Química Clínica",
+    "observacion": ""
+  },
+  "Fructosamina": {
+    "muestra": "Sangre con heparina (Tapa verde)",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Química Clínica",
+    "observacion": ""
+  },
+  "FSH": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8hs. Pacientes que ya menstrúan: Se debe realizar entre los días 3 y 5 del ciclo menstrual (día 1: primer día de la menstruación). Si está tomando alguna medicación para la función hormonal, tomarla después de haber realizado el estudio. Suspender anticonceptivos orales al menos durante 1 mes (previa consulta con el médico).",
+    "sector": "Endocrinología (241)",
+    "observacion": ""
+  },
+  "Hisopado Anal Vaginal (HAV) / SBHGB/ EGB": {
+    "muestra": "Hisopo con medio de transporte Stuart (gel celeste) o Cary Blair",
+    "condiciones": "Hisopado vaginal (introito) y ano-rectal. Conservación en heladera.",
+    "sector": "Bacteriología",
+    "observacion": ""
+  },
+  "Ácido homovanílico": {
+    "muestra": "Suero y orina",
+    "condiciones": "Ayuno 8 hs.",
+    "sector": "Endocrinología (241)",
+    "observacion": "Se requiere orden de compra, firmada por dirección"
+  },
+  "Ácidos nucleicos en saliva": {
+    "muestra": "Saliva en tubo",
+    "condiciones": "",
+    "sector": "Jefatura (230) y Preanalítica (394)",
+    "observacion": "Se deriva a CABA"
+  },
+  "Hisopado/exudado de fauces (HF)": {
+    "muestra": "Hisopo con medio de transporte Stuar (gel celeste) o Cary Blair",
+    "condiciones": "Hisopar con bajalenguas las amigdalas y lesiones exudadas visibles de fauces evitando la lengua y la boca. Conservación en heladera.",
+    "sector": "Bacteriología",
+    "observacion": ""
+  },
+  "Gamma glutamil transferasa (GGT)": {
+    "muestra": "Sangre con heparina (Tapa verde)",
+    "condiciones": "Ayuno de 8hs",
+    "sector": "Química Clínica",
+    "observacion": ""
+  },
+  "GH (hormona de crecimiento - somatotropina) basal y Prueba de estímulo Arginina/ Clonidina": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Antes de las 9 de la mañana, con ayuno de 8hs.",
+    "sector": "Endocrinología (241)",
+    "observacion": ""
+  },
+  "Glucemia/ Glucosa": {
+    "muestra": "Sangre con heparina (Tapa verde)",
+    "condiciones": "Ayuno de 8hs",
+    "sector": "Química Clínica",
+    "observacion": ""
+  },
+  "Glucosuria": {
+    "muestra": "Orina de 24 hs u orina al azar",
+    "condiciones": "Orina de 24 hs: Desechar la primera orina de la mañana. Anotar la hora de descarte para tomarla como hora de inicio. Recolectar TODO el volumen de todas las micciones hasta la primera del día siguiente inclusive (Esta debe coincidir con el horario de descarte de la mañana anterior) Orina al azar : chorro medio 10 ml . Recipiente limpio y seco",
+    "sector": "Química Clínica",
+    "observacion": ""
+  },
+  "Graham Test / Test de las gasitas": {
+    "muestra": "Gasitas en frasco",
+    "condiciones": "Tomar una muestra por día al momento de despertar previo a levantarse, durante 6 días consecutivos, utilizando cada una de las gasas. Para ello pasar la gasa humedecida alrededor del ano, antes de higienizar la zona. Introducirla en el frasco limpio y remitirla al laboratorio al finalizar (a los 6 días)",
+    "sector": "Parasitología",
+    "observacion": ""
+  },
+  "17-OH Progesterona": {
+    "muestra": "Suero (tubo seco)",
+    "condiciones": "Ayuno de 8-10 horas, se debe realizar la extracción antes de las 9 am. En pacientes de sexo femenino salvo indicación médica diferente, es aconsejable realizar la extracción entre los días 3 y 5 del ciclo menstrual (día 1: primer día de la menstruación). Si está tomando alguna medicación para la función hormonal, tómela después de haber realizado el estudio. El día anterior a la toma de la muestra no mantener relaciones sexuales y evitar situaciones de estrés.",
+    "sector": "Endocrinología (241)",
+    "observacion": ""
+  },
+  "Haptoglobina": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8 hs",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "HDL": {
+    "muestra": "Sangre con heparina (Tapa verde)",
+    "condiciones": "Ayuno de 8hs",
+    "sector": "Química Clínica",
+    "observacion": ""
+  },
+  "Helicobacter pilory": {
+    "muestra": "Materia fecal fresca",
+    "condiciones": "Frasco estéril. Sólo si está solicitado por servicio de Gastroenterología",
+    "sector": "Bacteriología",
+    "observacion": ""
+  },
+  "Hematocrito": {
+    "muestra": "Sangre con EDTA (Tapa violeta)",
+    "condiciones": "Ayuno 8 hs",
+    "sector": "Hemogramas",
+    "observacion": ""
+  },
+  "Hematocrito jeringa": {
+    "muestra": "Jeringa heparinizada (Neonatología)",
+    "condiciones": "-",
+    "sector": "Sector medio interno / guardia",
+    "observacion": ""
+  },
+  "Hemocultivo x 2": {
+    "muestra": "2 frascos con mínimo 1-3 ml de sangre (pediátricos) y 5-10 ml de sangre (adultos)",
+    "condiciones": "Realizar mediante extracción ESTÉRIL. Tomar ambos frascos con una diferencia mínima de 30 min. Rotular cada uno.",
+    "sector": "Bacteriología",
+    "observacion": ""
+  },
+  "Hemoglobina glicosilada (HbA1c)": {
+    "muestra": "Sangre con EDTA (Tapa violeta)",
+    "condiciones": "Ayuno de 8hs",
+    "sector": "Química Clínica",
+    "observacion": ""
+  },
+  "Hemograma Completo": {
+    "muestra": "Sangre con EDTA (Tapa violeta). Importante respetar el enrase",
+    "condiciones": "Ayuno de 8hs",
+    "sector": "Hemogramas",
+    "observacion": ""
+  },
+  "Hepatitis A IgM/total": {
+    "muestra": "Suero (tubo seco/tapa roja) o tubo con heparina (tapa verde)",
+    "condiciones": "Ayuno de 8hs",
+    "sector": "Serología (232)",
+    "observacion": ""
+  },
+  "Hepatitis B anti-core (antiHBc) IgG/IgM": {
+    "muestra": "Suero (tubo seco/tapa roja) o tubo con heparina (tapa verde)",
+    "condiciones": "Ayuno de 8hs",
+    "sector": "Serología (232)",
+    "observacion": ""
+  },
+  "Hepatitis C (HCV)": {
+    "muestra": "Suero (tubo seco/tapa roja) o tubo con heparina (tapa verde)",
+    "condiciones": "Ayuno de 8hs",
+    "sector": "Serología (232)",
+    "observacion": ""
+  },
+  "Hepatograma (GOT, GPT, FAL, BiliT/D/I)": {
+    "muestra": "Sangre con heparina (Tapa verde)",
+    "condiciones": "Ayuno de 8hs",
+    "sector": "Química Clínica",
+    "observacion": ""
+  },
+  "Herpes Simple Virus I y II (HSV) IgG/IgM": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8hs",
+    "sector": "Serología (232)",
+    "observacion": ""
+  },
+  "Hidatidosis/Arco 5": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8hs",
+    "sector": "Serología (232)",
+    "observacion": ""
+  },
+  "Hisopado/Exudado Ocular": {
+    "muestra": "Hisopo con medio de transporte Stuart (gel celeste) o Cary Blair",
+    "condiciones": "Uno por ojo. Conservación a temperatura ambiente",
+    "sector": "Bacteriología",
+    "observacion": ""
+  },
+  "HIV": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno 8 hs + Planilla de consentimiento",
+    "sector": "Serología (232)",
+    "observacion": ""
+  },
+  "HIV Test rápido": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno 8 hs + Planilla de consentimiento",
+    "sector": "Serología (232)",
+    "observacion": ""
+  },
+  "Hormona anti-Mulleriana (AMH)": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8 horas",
+    "sector": "Endocrinología (241)",
+    "observacion": ""
+  },
+  "IgA Total": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8 hs",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "IgE Total": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8 hs",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "IGF-1 (Somatomedina)": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Antes de las 9 de la mañana, con ayuno de 8hs.",
+    "sector": "Endocrinología (241)",
+    "observacion": ""
+  },
+  "IGF-1BP3": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Antes de las 9 de la mañana, con ayuno de 8hs.",
+    "sector": "Endocrinología (241)",
+    "observacion": ""
+  },
+  "IgG Total": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8 hs",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "IgM Total": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8 hs",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "Inhibidor Lúpico (IL)": {
+    "muestra": "Sangre con citrato (Tubo tapa celeste). Al menos 2 tubos",
+    "condiciones": "Pediátricos: menores de 6 meses ayuno mínimo de 2 hs, entre 6 meses y 2 años ayuno mínimo de 3 hs, mayores a 2 años ayuno mínimo de 4 hs. Adultos: Ayuno de 8 hs.",
+    "sector": "Hemostasia",
+    "observacion": ""
+  },
+  "Inmunofenotipo": {
+    "muestra": "Sangre con EDTA (Tubo tapa violeta). Conservar a temperatura ambiente",
+    "condiciones": "Ayuno de 8 hs",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "Insulina": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8hs",
+    "sector": "Endocrinología (241)",
+    "observacion": ""
+  },
+  "Ionograma en sangre (Na+, Cl-, K+)": {
+    "muestra": "Jeringa/tubo con Heparina (tapa verde)",
+    "condiciones": "Ausencia de aire. Remitir inmediatamente",
+    "sector": "Medio Interno (242)",
+    "observacion": ""
+  },
+  "Ionograma Urinario (Na+, Cl-, K+)": {
+    "muestra": "Orina de 24hs u orina al azar.",
+    "condiciones": "Orina de 24 hs: Desechar la primera orina de la mañana. Anotar la hora de descarte para tomarla como hora de inicio. Recolectar TODO el volumen de todas las micciones hasta la primera del día siguiente inclusive (Esta debe coincidir con el horario de descarte de la mañana anterior). Orina al azar: chorro medio 10 ml. Recipiente limpio y seco",
+    "sector": "Química Clínica",
+    "observacion": ""
+  },
+  "LCR Citoquímico": {
+    "muestra": "Tubo cónico estéril sin anticoagulante",
+    "condiciones": "Conservar a temperatura ambiente",
+    "sector": "Medio Interno (242)",
+    "observacion": ""
+  },
+  "LCR Cultivo": {
+    "muestra": "Frasco estéril sin anticoagulante",
+    "condiciones": "Conservar a temperatura ambiente",
+    "sector": "Bacteriología",
+    "observacion": ""
+  },
+  "LCR Virológico (HSV I/HSV II/Enterovirus)": {
+    "muestra": "Tubo cónico estéril sin anticoagulante",
+    "condiciones": "Conservar refrigerado",
+    "sector": "Serología",
+    "observacion": ""
+  },
+  "LDH": {
+    "muestra": "Sangre con heparina (Tapa verde)",
+    "condiciones": "Ayuno de 8hs",
+    "sector": "Química Clínica",
+    "observacion": ""
+  },
+  "LDL": {
+    "muestra": "Sangre con heparina (Tapa verde)",
+    "condiciones": "Ayuno de 8hs",
+    "sector": "Química Clínica",
+    "observacion": ""
+  },
+  "Leptospirosis": {
+    "muestra": "Suero",
+    "condiciones": "Ayuno 8 hs + Planilla Epidemiológica",
+    "sector": "Serología (232)",
+    "observacion": ""
+  },
+  "LH": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8hs. Pacientes que ya menstrúan: Se debe realizar entre los días 3 y 5 del ciclo menstrual (día 1: primer día de la menstruación). Si está tomando alguna medicación para la función hormonal, tomarla después de haber realizado el estudio. Suspender anticonceptivos orales al menos durante 1 mes (previa consulta con el médico).",
+    "sector": "Endocrinología (241)",
+    "observacion": ""
+  },
+  "Líquidos de punción (otros)": {
+    "muestra": "Frasco estéril con anticoagulante / Jeringa con anticoagulante",
+    "condiciones": "Conservar a temperatura ambiente",
+    "sector": "Bacteriología",
+    "observacion": ""
+  },
+  "Magnesio (Mg)": {
+    "muestra": "Sangre con heparina (Tapa verde)",
+    "condiciones": "Ayuno de 8hs",
+    "sector": "Química Clínica",
+    "observacion": ""
+  },
+  "Magnesiuria/ Mg en orina/ Magnesio en orina": {
+    "muestra": "Orina de 24hs u orina al azar",
+    "condiciones": "Orina de 24 hs: Desechar la primera orina de la mañana. Anotar la hora de descarte para tomarla como hora de inicio. Recolectar TODO el volumen de todas las micciones hasta la primera del día siguiente inclusive (Esta debe coincidir con el horario de descarte de la mañana anterior) Orina al azar : chorro medio 10 ml . Recipiente limpio y seco.",
+    "sector": "Química Clinica",
+    "observacion": ""
+  },
+  "Micológico": {
+    "muestra": "Uña, pelo, piel, cuero cabelludo",
+    "condiciones": "Uña: raspado con bisturí : no utilizar cremas o medicación tópica tres días previos a la toma de muestra. Realizar lavados previos con agua y sal. Usar calzado cerrado y no utilizar esmalte. Piel/pelo: no utilizar cremas o medicación tópica. Cuero cabelludo: descamar parte externa de la lesión",
+    "sector": "Parasitología/Micología",
+    "observacion": ""
+  },
+  "Microalbúminuria": {
+    "muestra": "Orina 24 hs u Orina al azar (índice creatinuria/albuminuria)",
+    "condiciones": "Orina de 24 hs: Desechar la primera orina de la mañana. Anotar la hora de descarte para tomarla como hora de inicio. Recolectar TODO el volumen de todas las micciones hasta la primera del día siguiente inclusive (Esta debe coincidir con el horario de descarte de la mañana anterior). Orina al azar : chorro medio 10 ml . Recipiente limpio y seco",
+    "sector": "Química Clínica",
+    "observacion": ""
+  },
+  "Microhematocrito CHAGAS": {
+    "muestra": "Jeringa heparinizada (al menos 1 ml) o tubo con EDTA (Tapa violeta de 1 ml)",
+    "condiciones": "-",
+    "sector": "Serología (232)",
+    "observacion": ""
+  },
+  "Mycoplasma pneumoniae IgG/IgM": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8 hs",
+    "sector": "Serología (232)",
+    "observacion": ""
+  },
+  "Noradrenalina": {
+    "muestra": "Ver Adrenalina",
+    "condiciones": "Ver Adrenalina",
+    "sector": "Endocrinología (241)",
+    "observacion": ""
+  },
+  "Orina Completa": {
+    "muestra": "Orina",
+    "condiciones": "Orina recolectada al azar en frasco limpio y seco o bolsita recolectora. Retención mínima 3 hs. Volumen mínimo: 10 ml",
+    "sector": "Orinas",
+    "observacion": ""
+  },
+  "Partes blandas": {
+    "muestra": "Frasco estéril",
+    "condiciones": "Conservar a temperatura ambiente, siembra inmediata.",
+    "sector": "Bacteriología",
+    "observacion": ""
+  },
+  "Partes óseas / hueso": {
+    "muestra": "Frasco estéril",
+    "condiciones": "Conservar a temperatura ambiente, siembra inmediata.",
+    "sector": "Bacteriología",
+    "observacion": ""
+  },
+  "Parvovirus B19 IgG/IgM": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8 hs",
+    "sector": "Serología (232)",
+    "observacion": ""
+  },
+  "PCR (Proteína C Reactiva)": {
+    "muestra": "Sangre con heparina (Tapa verde)",
+    "condiciones": "Ayuno de 8 hs",
+    "sector": "Química Clínica",
+    "observacion": ""
+  },
+  "Perfil Lipídico": {
+    "muestra": "Sangre con heparina (Tapa verde)",
+    "condiciones": "Ayuno de 8hs",
+    "sector": "Química Clínica",
+    "observacion": ""
+  },
+  "Poblaciones doble negativas": {
+    "muestra": "Sangre con EDTA (Tubo tapa violeta). Conservar a temperatura ambiente",
+    "condiciones": "Ayuno de 8 hs",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "Poblaciones linfocitarias (CD3/CD4/CD8/CD19/CD56)": {
+    "muestra": "Sangre con EDTA (Tubo tapa violeta)",
+    "condiciones": "Ayuno de 8 hs. Conservar a temperatura ambiente",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "Pro-BNP": {
+    "muestra": "Sangre con EDTA (Tubo tapa violeta)",
+    "condiciones": "Ayuno de 8 hs",
+    "sector": "Derivación a cargo de la Guardia (242)",
+    "observacion": ""
+  },
+  "Progesterona": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8-10 horas. Se debe realizar el día 21 del ciclo menstrual. Si está tomando alguna medicación para la función hormonal, tómela después de haber realizado el estudio. Suspender anticonceptivos orales al menos durante 1 mes (previa consulta con el médico)",
+    "sector": "Endocrinología (241)",
+    "observacion": ""
+  },
+  "Prolactina/ PRL": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8 hs. Se debe realizar la extracción antes de las 9 am. El paciente deberá levantarse 1½ hora antes de la extracción y en el laboratorio permanecer en reposo durante 20 minutos (sin excepción). En pacientes de sexo femenino, salvo indicación médica diferente, es aconsejable realizar la extracción entre los días 3 y 5 del ciclo (día 1: primer día de la menstruación). Importante aclarar si se encuentra tomando alguna medicación, ya que un gran número de drogas pueden generar hiperprolactinemia. Si la medicación es para la función hormonal, la debe tomar después de haber realizado el estudio. El día anterior a la toma de la muestra no debe mantener relaciones sexuales y evitar situaciones de estrés.",
+    "sector": "Endocrinología (241)",
+    "observacion": ""
+  },
+  "Proteína C": {
+    "muestra": "Sangre con citrato (Tubo tapa celeste). Al menos 2 tubos (ideal 3)",
+    "condiciones": "Reposo de 30 minutos previo a la extracción. Pediátricos: menores de 6 meses ayuno mínimo de 2 hs, entre 6 meses y 2 años ayuno mínimo de 3 hs, mayores a 2 años ayuno mínimo de 4 hs. Adultos: Ayuno de 8 hs.",
+    "sector": "Hemostasia",
+    "observacion": ""
+  },
+  "Proteína S": {
+    "muestra": "Sangre con citrato (Tubo tapa celeste). Al menos 2 tubos (ideal 3)",
+    "condiciones": "Reposo de 30 minutos previo a la extracción. Pediátricos: menores de 6 meses ayuno mínimo de 2 hs, entre 6 meses y 2 años ayuno mínimo de 3 hs, mayores a 2 años ayuno mínimo de 4 hs. Adultos: Ayuno de 8 hs.",
+    "sector": "Hemostasia",
+    "observacion": ""
+  },
+  "Proteinas Totales": {
+    "muestra": "Sangre con heparina (Tapa verde)",
+    "condiciones": "Ayuno de 8hs",
+    "sector": "Química Clínica",
+    "observacion": ""
+  },
+  "Proteinograma electroforético": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8 hs",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "Prueba de tolerancia oral a la glucosa (PTOG)": {
+    "muestra": "Sangre con heparina (Tapa verde)",
+    "condiciones": "Ayuno de 8 hs (primera extracción). Ingesta de solución glucosada, ayuno y reposo post ingesta de 2 hs y luego segunda extracción de sangre.",
+    "sector": "Química Clínica",
+    "observacion": ""
+  },
+  "Prueba treponémica": {
+    "muestra": "Suero (Tubo seco/Tapa roja)",
+    "condiciones": "-",
+    "sector": "Serología (232)",
+    "observacion": ""
+  },
+  "PTH (Paratohormona)": {
+    "muestra": "Sangre con EDTA (remitir inmediatamente al laboratorio ya que debe ser refrigerado)",
+    "condiciones": "Realizar la extracción antes de las 9AM, con 8hs de ayuno",
+    "sector": "Endocrinología (241)",
+    "observacion": ""
+  },
+  "Punta de catéter": {
+    "muestra": "Frasco estéril (5 cm)",
+    "condiciones": "Remitir siempre junto a hemocultivo periférico obtenido previo a la retirada del catéter.",
+    "sector": "Bacteriología",
+    "observacion": ""
+  },
+  "Renina": {
+    "muestra": "Sangre en tubo con EDTA (remitir inmediatamente al laboratorio ya que debe ser refrigerado)",
+    "condiciones": "Antes de las 10 de la mañana, con ayuno de 8-10 hs. Si la orden indica: REPOSO: permanecerá de 1 ½ hora a 2 horas acostado. DE PIE o ACOSTADO: se respetará la orden médica de 1 ½ hora a 2 horas. NO INDICA REPOSO: el paciente deberá permanecer de pie o deambular de 1 ½ hora a 2 horas Previa consulta médica si las condiciones clínicas lo permiten: • El paciente deberá mantener una dieta previa normosódica por lo menos 2 semanas antes de la toma de muestra. • Deberá evitar 2-4 semanas previas a la extracción de sangre: diuréticos, antihipertensivos, esteroides, anticonceptivos orales, propanolol, progesterona, estrógenos, corticoides, opiáceos, heparina, espironolactona, litio, bloqueantes de canales de Ca, inhibidores de la ECA. • Suspender por lo menos 2 semanas antes de la toma de muestra la ingesta de café y alcohol. • Suspender actividad física.",
+    "sector": "Endocrionología (241)",
+    "observacion": ""
+  },
+  "Reticulocitos": {
+    "muestra": "Sangre con EDTA (Tubo tapa violeta)",
+    "condiciones": "Ayuno de 8 hs",
+    "sector": "Hemogramas",
+    "observacion": ""
+  },
+  "Retrocultivo": {
+    "muestra": "Frasco de hemocultivo",
+    "condiciones": "Extracción de sangre a través del catéter en forma estéril, obtener el mismo tiempo hemocultivo. Mismo volumen en hemocultivo y retrocultivo",
+    "sector": "Bacteriología",
+    "observacion": ""
+  },
+  "RIN": {
+    "muestra": "Sangre con citrato (Tubo tapa celeste)",
+    "condiciones": "Pediátricos: menores de 6 meses ayuno mínimo de 2 hs, entre 6 meses y 2 años ayuno mínimo de 3 hs, mayores a 2 años ayuno mínimo de 4 hs. Adultos: Ayuno",
+    "sector": "Hemostasia",
+    "observacion": ""
+  },
+  "Rubeola IgG/IgM": {
+    "muestra": "Suero",
+    "condiciones": "Ayuno 8 hs",
+    "sector": "Serología (232)",
+    "observacion": ""
+  },
+  "Sedimento de Orina": {
+    "muestra": "Orina",
+    "condiciones": "Orina recolectada al azar en frasco limpio y seco o bolsita recolectora. Volumen mínimo: 10 ml",
+    "sector": "Orinas",
+    "observacion": ""
+  },
+  "Subunidad Beta HCG": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8hs. Anotar FUM",
+    "sector": "Endocrinología (241)",
+    "observacion": ""
+  },
+  "T3 (triyodotironina)": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8 hs, El día de la extracción no debe tomar la medicación previo a la misma.",
+    "sector": "Endocrinología (241)",
+    "observacion": ""
+  },
+  "T4 Libre (tiroxina)/T4L": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8 hs, El día de la extracción no debe tomar la medicación previo a la misma.",
+    "sector": "Endocrinología (241)",
+    "observacion": ""
+  },
+  "Test de hipersensibilidad al abacavir": {
+    "muestra": "Hisopado bucal (Muestra tomada por personal de Serología, avisar previamente al sector)",
+    "condiciones": "Hisopar 10 veces por el lado interno de cada mejilla desde la parte superior a la encía. Dejar secar el hisopo 10 minutos evitando que toque alguna superficie y colocarlo en sobre de papel madera.",
+    "sector": "Serología (232)",
+    "observacion": ""
+  },
+  "Testosterona": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8-10 horas, se debe realizar la extracción antes de las 9 am. En pacientes de sexo femenino salvo indicación médica diferente, es aconsejable realizar la extracción entre los días 3 y 5 del ciclo menstrual (día 1: primer día de la menstruación). Si está tomando alguna medicación para la función hormonal, tómela después de haber realizado el estudio. El día anterior a la toma de la muestra no mantener relaciones sexuales y evitar situaciones de estrés.",
+    "sector": "Endocrinología (241)",
+    "observacion": ""
+  },
+  "Testosterona libre": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8-10 horas, se debe realizar la extracción antes de las 9 am. En pacientes de sexo femenino salvo indicación médica diferente, es aconsejable realizar la extracción entre los días 3 y 5 del ciclo menstrual (día 1: primer día de la menstruación). Si está tomando alguna medicación para la función hormonal, tómela después de haber realizado el estudio. El día anterior a la toma de la muestra no mantener relaciones sexuales y evitar situaciones de estrés.",
+    "sector": "Endocrinología (241)",
+    "observacion": ""
+  },
+  "TGO / GOT / AST": {
+    "muestra": "Sangre con heparina (tapa verde)",
+    "condiciones": "Ayuno de 8hs",
+    "sector": "Química Clínica",
+    "observacion": ""
+  },
+  "TGP / GPT /ALT": {
+    "muestra": "Sangre con heparina (tapa verde)",
+    "condiciones": "Ayuno de 8hs",
+    "sector": "Química Clínica",
+    "observacion": ""
+  },
+  "Tiempo de Protrombina (TP)": {
+    "muestra": "Sangre con citrato (Tubo tapa celeste)",
+    "condiciones": "Pediátricos: menores de 6 meses ayuno mínimo de 2 hs, entre 6 meses y 2 años ayuno mínimo de 3 hs, mayores a 2 años ayuno mínimo de 4 hs. Adultos: Ayuno de 8 hs.",
+    "sector": "Hemostasia",
+    "observacion": ""
+  },
+  "T4 Total/T4/T4T": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8 hs, El día de la extracción no debe tomar la medicación previo a la misma.",
+    "sector": "Endocrinología (241)",
+    "observacion": ""
+  },
+  "Tiempo de tromboplastina (KPTT/APTT)": {
+    "muestra": "Sangre con citrato (Tubo tapa celeste)",
+    "condiciones": "Pediátricos: menores de 6 meses ayuno mínimo de 2 hs, entre 6 meses y 2 años ayuno mínimo de 3 hs, mayores a 2 años ayuno mínimo de 4 hs. Adultos: Ayuno de 8 hs.",
+    "sector": "Hemostasia",
+    "observacion": ""
+  },
+  "Toxocara canii IgG/IgM": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8 hs",
+    "sector": "Serología (232)",
+    "observacion": ""
+  },
+  "Toxoplasmosis IgG/IgM": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8 hs",
+    "sector": "Serología (232)",
+    "observacion": ""
+  },
+  "TRAb (Anticuerpos anti TSHR)": {
+    "muestra": "Suero (tubo seco)",
+    "condiciones": "Ayuno de 8 hs",
+    "sector": "Endocrinología (241)",
+    "observacion": "Requiere orden de compra"
+  },
+  "Transferrina": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8 hs",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "Triglicéridos / TG / TGL": {
+    "muestra": "Sangre con heparina (Tapa verde)",
+    "condiciones": "Ayuno de 12hs",
+    "sector": "Química Clínica",
+    "observacion": ""
+  },
+  "Trombina": {
+    "muestra": "Sangre con citrato (Tubo tapa celeste)",
+    "condiciones": "Pediátricos: menores de 6 meses ayuno mínimo de 2 hs, entre 6 meses y 2 años ayuno mínimo de 3 hs, mayores a 2 años ayuno mínimo de 4 hs. Adultos: Ayuno de 8 hs.",
+    "sector": "Hemostasia",
+    "observacion": ""
+  },
+  "Troponina": {
+    "muestra": "Sangre con EDTA (Tubo tapa violeta)",
+    "condiciones": "Ayuno de 8hs",
+    "sector": "Derivación a cargo de la Guardia (242)",
+    "observacion": ""
+  },
+  "TSH (hormona tiroestimulante)": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8 hs, El día de la extracción no debe tomar la medicación previo a la misma.",
+    "sector": "Endocrinología (241)",
+    "observacion": ""
+  },
+  "Uremia": {
+    "muestra": "Sangre con heparina (Tapa verde)",
+    "condiciones": "Ayuno de 8hs",
+    "sector": "Química Clínica",
+    "observacion": ""
+  },
+  "Urocultivo": {
+    "muestra": "Orina en frasco estéril",
+    "condiciones": "Primera orina de la mañana o retención mínima de 3hs, previa higiene con agua y jabón, sin o luego de 72 hs de suspendida la medicación antibiótica, con tapón vaginal en las mujeres. Técnica de chorro medio, punción vesical o punción de sonda. Conservación en heladera. Se rechaza bolsa colectora.",
+    "sector": "Bacteriología",
+    "observacion": ""
+  },
+  "Uroproteinograma": {
+    "muestra": "Orina 24 hs",
+    "condiciones": "Orina de 24 hs: Desechar la primera orina de la mañana. Anotar la hora de descarte para tomarla como hora de inicio. Recolectar TODO el volumen de todas las micciones hasta la primera del día siguiente inclusive (Esta debe coincidir con el horario de descarte de la mañana anterior). Recipiente limpio y seco",
+    "sector": "Inmunología (236)",
+    "observacion": ""
+  },
+  "Varicela IgG/IgM": {
+    "muestra": "Suero",
+    "condiciones": "Ayuno de 8 hs",
+    "sector": "Serología (232)",
+    "observacion": ""
+  },
+  "VDRL": {
+    "muestra": "Suero (Tubo seco) o LCR (Frasco estéril, muestra no hemorrágica, conservar refrigerada)",
+    "condiciones": "Ayuno de 8 hs",
+    "sector": "Serología (232)",
+    "observacion": ""
+  },
+  "Vitamina B12": {
+    "muestra": "Suero (Tubo seco) Recubierto con cinta, al abrigo de la luz",
+    "condiciones": "Ayuno de 8hs",
+    "sector": "Endocrinología (241)",
+    "observacion": ""
+  },
+  "Vitamina D": {
+    "muestra": "Sangre en tubo seco recubierto con cinta o papel aluminio (al abrigo de la luz)",
+    "condiciones": "Ayuno de 8hs",
+    "sector": "Endocrinología (241)",
+    "observacion": ""
+  },
+  "Zyka Virus": {
+    "muestra": "Suero / Orina / LCR",
+    "condiciones": "Ayuno 8 hs + Planilla Epidemiológica. Orina al azar en frasco estéril (mínimo 3ml) obtenida del día 5-15 de inicio de síntomas. LCR: al menos 1 ml en tubo estéril. Mantener refrigerado (freezer)",
+    "sector": "Serología (232)",
+    "observacion": ""
+
+  }
+
+};
+
+function resaltar(texto) {
+  return texto
+    .replace(/\bEDTA\b/gi, "<b style='color: purple;'>EDTA</b>")
+    .replace(/\bheparina\b/gi, "<b style='color: green;'>heparina</b>")
+    .replace(/\bcitrato\b/gi, "<b style='color: #00BFFF;'>citrato</b>")
+    .replace(/\bjeringa\b/gi, "💉 jeringa");
+}
+
+function mostrar(clave, info) {
+  return `<div class='item'>
+    <strong>${clave}</strong><br>
+    <strong>Tipo de muestra:</strong> ${resaltar(info.muestra)}<br>
+    <strong>📋 Condiciones preanalíticas:</strong> ${resaltar(info.condiciones)}<br>
+    <strong>📌 Sector:</strong> ${info.sector}<br>
+    ${info.observacion ? `<strong>${info.observacion}</strong>` : ""}
+  </div>`;
+}
+
+function buscar(nombre) {
+  const entrada = (nombre || document.getElementById("busqueda").value).trim().toLowerCase();
+  const resultado = document.getElementById("resultado");
+  resultado.innerHTML = "";
+
+  const entradaNormalizada = entrada.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+  const coincidencias = Object.entries(datos)
+    .filter(([clave]) =>
+      clave.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(entradaNormalizada)
+    )
+    .sort(([aClave], [bClave]) => {
+      const a = aClave.toLowerCase();
+      const b = bClave.toLowerCase();
+      const empiezaA = a.startsWith(entrada);
+      const empiezaB = b.startsWith(entrada);
+      
+      if (empiezaA && !empiezaB) return -1;
+      if (!empiezaA && empiezaB) return 1;
+
+      // Si ambos o ninguno empiezan con la entrada, ordenar por longitud
+      return a.length - b.length;
+    });
+
+  if (coincidencias.length > 0) {
+    resultado.innerHTML = coincidencias.map(([clave, info]) => mostrar(clave, info)).join("");
+  } else {
+    resultado.innerHTML = "<p>No se encontraron resultados.</p>";
+  }
+}
+
+
+function limpiar() {
+  document.getElementById("busqueda").value = "";
+  document.getElementById("resultado").innerHTML = "";
+}
+// Habilita búsqueda con Enter
+document.getElementById("busqueda").addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    buscar();
+  }
+});
+</script>
+</body>
+</html>
