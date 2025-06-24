@@ -1584,5 +1584,15 @@ document.getElementById("busqueda").addEventListener("keydown", function(event) 
   }
 });
 </script>
+<p id="fecha-actualizacion" style="font-size: 12px; color: gray; text-align: center; margin-top: 20px;"></p>
+
+<script>
+  function fechaEnEspanol(fecha) {
+    const opciones = { year: 'numeric', month: 'long', day: 'numeric' };
+    return fecha.toLocaleDateString('es-ES', opciones);
+  }
+  document.getElementById('fecha-actualizacion').textContent = 
+    'Última actualización: ' + fechaEnEspanol(new Date());
+</script>  
 </body>
 </html>
