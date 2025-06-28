@@ -89,6 +89,44 @@ h2 {
   margin-bottom: 20px;
 }
 
+.botones {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+button.buscar {
+  background-color: #2196F3;
+}
+
+button.buscar:hover {
+  background-color: #1976d2;
+}
+
+button.borrar {
+  background-color: #e53935;
+}
+
+button.borrar:hover {
+  background-color: #c62828;
+}
+
+/* Animaciones suaves */
+button {
+  transition: transform 0.1s ease, background 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.03);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+    
+
+    
   @media (max-width: 600px) {
     body {
       padding: 20px !important;
@@ -112,7 +150,15 @@ h2 {
 <body>
 <div class="container">
   <h2>🔬 LABORATORIO HIEMI</h2>
-  <input type="text" id="busqueda" list="sugerencias" placeholder="Escribí el nombre de la determinación...">
+ 
+  
+ <input type="text" id="busqueda" list="sugerencias" placeholder="Escribí el nombre de la determinación...">
+
+<div class="botones">
+  <button class="buscar" onclick="buscar()">Buscar</button>
+  <button class="borrar" onclick="borrar()">Borrar</button>
+</div>
+
   <datalist id="sugerencias">
     <option value="Abcesos">
     <option value="Ac Anti Péptido deaminado de Gliadina IgG/IgA (Celiaquía / aDPG)">
