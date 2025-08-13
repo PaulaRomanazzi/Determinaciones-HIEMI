@@ -169,8 +169,11 @@ button:active {
 
   <datalist id="sugerencias">
     <option value="Abcesos">
+    <option value="Acilcarnitina y aminoácidos en GSPF">
     <option value="Ac Anti Péptido deaminado de Gliadina IgG/IgA (Celiaquía / aDPG)">
     <option value="Ac Anticardiolipina">
+    <option value="Anti Musk">
+    <option value="ACRA/ Anticuerpos anti-receptor de acetilcolina">
     <option value="Ac Antiendomisio (Celiaquía)">
     <option value="Ac Antifosfolípidos">
     <option value="Ac Antitransglutaminasa IgA (Celiaquía/aTG)">
@@ -450,11 +453,29 @@ const datos = {
     "sector": "Inmunología (411)",
     "observacion": ""
   },
+  "Acilcarnitina y aminoácidos en GSPF": {
+    "muestra": "Papel de filtro con gotas de sangre de talòn (Whatman 903), como para la pesquisa neonatal. Realizar la extracción con lun minimo de 4 horas de ayuno. Llenar mínimo 3 circulos de papel, sin superponer las gotas, que la muetra sea homogenea, debe atravesar ambos lados de la tarjeta.",
+    "condiciones": "Debe presentarse junto con planillas de derivación para el Laboratorio de Errores Congenitos. Historia Clinica, etc.",
+    "sector": "Preanalitica (394)",
+    "observacion": "Se deriva al Laboratorio de Errores Congenitos del metabolismo del Hospital Garrahan. Direccón: Combate los Pozos 1881- (1245) CABA. Entregar en Ventanilla de pacientes- laboratorio central de lun a juev de 8 a 12 hs."
+  },
   "Ac Anticardiolipina": {
     "muestra": "Suero (Tubo seco)",
     "condiciones": "Ayuno de 8 hs.",
     "sector": "Inmunología (411)",
     "observacion": ""
+  },
+  "Anti Musk": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8 hs. Requiere orden de compra",
+    "sector": "Inmunología (411) o Preanalitica (394)",
+    "observacion": "Se deriva al Lab. Fares Taie"
+  },
+  "ACRA/ Anticuerpos anti-receptor de acetilcolina": {
+    "muestra": "Suero (Tubo seco)",
+    "condiciones": "Ayuno de 8 hs. Requiere orden de compra",
+    "sector": "Preanalitica (394)",
+    "observacion": "Se deriva al Lab. Fares Taie"
   },
   "Ácidos orgánicos urinarios, Htal. Garrahan": {
     "muestra": "Orina al azar o primera orina de la mañana con el mayor tiempo de retencion posible, o del momento de crisis del paciente. Recipiente limpio refrigerado o congelado, con un volumen mnimo de 5 ml.",
@@ -517,10 +538,10 @@ const datos = {
     "observacion": "Remitir muestra antes de las 9:00 am ya que se deriva al HIGA"
 },
   "Aminoácidos plasmáticos": {
-    "muestra": "suero",
-    "condiciones": "",
+    "muestra": "Suero (Lab. Fraes Taie) o plasma con heparina (tapa verde) refrigerado o congeladocon vol minimo de 0.5 ml sin hemolisis presente (Htal. Garrahan)",
+    "condiciones": "Ayuno mínimo 4 horas. Requiere Orden de compra",
     "sector": "Jefatura (230) o Preanalítica (394)",
-    "observacion": "Se requiere orden de compra firmada por dirección (debe ser evaluado por Servicio Social)"
+    "observacion": "Si se deriva al Laboratorio de Errores Congenitos del metabolismo del Hospital Garrahan. Direccón: Combate los Pozos 1881- (1245) CABA. Entregar en Ventanilla de pacientes- laboratorio central de lun a juev de 8 a 12 hs. Rotular la caja con la etiqueta que viene en el formulario, planilla de datos del paciente, resumen de Historia Clinica que justificque el estudio, Consulta clínica, Formulario de propuesta con aceptacón de envío de la muestra. "
 },
   "Alfa- 1 antitripsina en materia fecal": {
     "muestra": "Materia fecal (3 días consecutivos)",
@@ -2022,5 +2043,6 @@ document.getElementById("busqueda").addEventListener("keydown", function(event) 
 </script>  
 </body>
 </html>
+
 
 
