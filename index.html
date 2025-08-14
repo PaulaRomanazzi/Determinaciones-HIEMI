@@ -170,6 +170,7 @@ button:active {
   <datalist id="sugerencias">
     <option value="Abcesos">
     <option value="Acilcarnitina y aminoácidos en GSPF">
+    <option value="Sindrome de Di George (FISH) por Biología Molecular">
     <option value="Ac Anti Péptido deaminado de Gliadina IgG/IgA (Celiaquía / aDPG)">
     <option value="Ac Anticardiolipina">
     <option value="Anti Musk">
@@ -470,6 +471,12 @@ const datos = {
     "condiciones": "Ayuno de 8 hs. Requiere orden de compra",
     "sector": "Inmunología (411) o Preanalitica (394)",
     "observacion": "Se deriva al Lab. Fares Taie"
+  },
+  "Sindrome de Di George (FISH) por Biología Molecular": {
+    "muestra": "tubo ESTÉRIL sangre entera con EDTA (tapa violeta) ",
+    "condiciones": "Ayuno de 8 hs. Requiere orden de compra",
+    "sector": "Preanalitica (394)",
+    "observacion": "Se deriva al Centro de Genética Médica, Las Heras 2670 3°piso CABA."
   },
   "ACRA/ Anticuerpos anti-receptor de acetilcolina": {
     "muestra": "Suero (Tubo seco)",
@@ -1723,13 +1730,13 @@ const datos = {
   "Proteína C": {
     "muestra": "Sangre con citrato (Tubo tapa celeste). Al menos 2 tubos (ideal 3)",
     "condiciones": "Reposo de 30 minutos previo a la extracción. Pediátricos: menores de 6 meses ayuno mínimo de 2 hs, entre 6 meses y 2 años ayuno mínimo de 3 hs, mayores a 2 años ayuno mínimo de 4 hs. Adultos: Ayuno de 8 hs.",
-    "sector": "Hemostasia",
+    "sector": "Hemostasia, se deriva al HIGA",
     "observacion": ""
   },
   "Proteína S": {
     "muestra": "Sangre con citrato (Tubo tapa celeste). Al menos 2 tubos (ideal 3)",
     "condiciones": "Reposo de 30 minutos previo a la extracción. Pediátricos: menores de 6 meses ayuno mínimo de 2 hs, entre 6 meses y 2 años ayuno mínimo de 3 hs, mayores a 2 años ayuno mínimo de 4 hs. Adultos: Ayuno de 8 hs.",
-    "sector": "Hemostasia",
+    "sector": "Hemostasia, se deriva al HIGA",
     "observacion": ""
   },
   "Proteinas Totales": {
@@ -2043,6 +2050,7 @@ document.getElementById("busqueda").addEventListener("keydown", function(event) 
 </script>  
 </body>
 </html>
+
 
 
 
