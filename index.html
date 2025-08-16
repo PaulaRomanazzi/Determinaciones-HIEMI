@@ -169,6 +169,7 @@ button:active {
 
   <datalist id="sugerencias">
     <option value="Abcesos">
+    <option value="Sangre oculta en Materia Fecal (SOMF)">
     <option value="Acilcarnitina y aminoácidos en GSPF">
     <option value="Sindrome de Di George (FISH) por Biología Molecular">
     <option value="Ac Anti Péptido deaminado de Gliadina IgG/IgA (Celiaquía / aDPG)">
@@ -463,6 +464,12 @@ const datos = {
   "Ac Anticardiolipina": {
     "muestra": "Suero (Tubo seco)",
     "condiciones": "Ayuno de 8 hs.",
+    "sector": "Inmunología (411)",
+    "observacion": ""
+  },
+  "Sangre oculta en Materia Fecal (SOMF)": {
+    "muestra": "Materia fecal fresca",
+    "condiciones": "Remitir en frasco limpio de boca ancha. No recolectar la muestra durante periodo menstrual o si el paciente presenta sangrado en orina/infección urinaria/litiasis. Conservar en heladera.",
     "sector": "Inmunología (411)",
     "observacion": ""
   },
@@ -1213,7 +1220,7 @@ const datos = {
   },
   "Elastasa": {
     "muestra": "Materia fecal fresca",
-    "condiciones": "Sólo si está solicitado por servicio de gastroenterología. Frasco limpio boca ancha. Conservar en heladera",
+    "condiciones": "Frasco limpio boca ancha. Conservar en heladera",
     "sector": "Inmunología (411)",
     "observacion": ""
   },
@@ -2050,6 +2057,7 @@ document.getElementById("busqueda").addEventListener("keydown", function(event) 
 </script>  
 </body>
 </html>
+
 
 
 
