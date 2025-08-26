@@ -171,6 +171,8 @@ button:active {
     <option value="Abcesos">
     <option value="Sangre oculta en Materia Fecal (SOMF)">
     <option value="Acilcarnitina y aminoácidos en GSPF">
+    <option value="Acido láctico">
+    <option value="Ácido láctico">
     <option value="Sindrome de Di George (FISH) por Biología Molecular">
     <option value="Ac Anti Péptido deaminado de Gliadina IgG/IgA (Celiaquía / aDPG)">
     <option value="Ac Anticardiolipina">
@@ -398,7 +400,7 @@ button:active {
     <option value="Aldolasa">
     <option value="Aldosterona">
     <option value="Aminoácidos plasmáticos">
-    <option value="Alfa- 1 antitripsina en materia fecal">
+    <option value="Alfa-1 antitripsina en materia fecal">
     <option value="Anticoagulante lúpico">
     <option value="Avidez toxoplasmosis">
     <option value="Beta 2 glicoproteína (IgM/IgG)">
@@ -557,9 +559,9 @@ const datos = {
     "sector": "Jefatura (230) o Preanalítica (394)",
     "observacion": "Si se deriva al Laboratorio de Errores Congenitos del metabolismo del Hospital Garrahan. Direccón: Combate los Pozos 1881- (1245) CABA. Entregar en Ventanilla de pacientes- laboratorio central de lun a juev de 8 a 12 hs. Rotular la caja con la etiqueta que viene en el formulario, planilla de datos del paciente, resumen de Historia Clinica que justificque el estudio, Consulta clínica, Formulario de propuesta con aceptacón de envío de la muestra. "
 },
-  "Alfa- 1 antitripsina en materia fecal": {
+  "Alfa-1 antitripsina en materia fecal": {
     "muestra": "Materia fecal (3 días consecutivos)",
-    "condiciones": "",
+    "condiciones": "MATERIAL: 3 frascos de boca ancha, lavados con agua y jabón y enjuagados con agua destilada. DIETA PREVIA: Durante 4 días el paciente deberá comer habitualmente suprimiendo todo tipo de alimento rico en fibras (verduras de hoja, cítricos, harina con salvado). DIA 1: Comenzar con la dieta. DIA 2: Continuar con la dieta y comenzar con la recolección de materia fecal en frasco 1. DIA 3: Continuar con la dieta y con la recolección de materia fecal en frasco 2. DIA 4: Continuar con la dieta y con la recolección de materia fecal en frasco 3. Recolectar toda la cantidad de materia fecal, cuidando que las heces no se contaminen con la orina. La recolección deberá realizarse en frascos separados y rotulados, uno por día. Mantenerlos en la heladera hasta el momento de remitirlos al laboratorio. Si se realiza el clearence, una vez finalizada la recolección de materia fecal, deberá concurrir al laboratorio con ayuno de 8 horas para la extracción de sangre.",
     "sector": "Jefatura (230) o Preanalítica (394)",
     "observacion": "Se requiere orden de compra firmada por dirección (debe ser evaluado por Servicio Social)"
 },
@@ -1049,6 +1051,12 @@ const datos = {
     "condiciones": "Ausencia de aire. Remitir inmediatamente.",
     "sector": "Medio Interno (242)",
     "observacion": ""
+  },
+  "Ácido láctico": {
+    "muestra": "Jeringa heparinizada c/tapa",
+    "condiciones": "Ausencia de aire. Remitir inmediatamente.",
+    "sector": "Medio Interno (242)",
+    "observacion": "Se procesa junto con el Estado ácido-base"
   },
   "Carga Viral HIV/HCV/HBV/CMV": {
     "muestra": "Sangre con EDTA (Tubo tapa violeta ESTÉRIL)",
@@ -2057,6 +2065,7 @@ document.getElementById("busqueda").addEventListener("keydown", function(event) 
 </script>  
 </body>
 </html>
+
 
 
 
